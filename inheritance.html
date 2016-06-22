@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>INHERITANCE</title>
+	<script type="text/javascript">
+		function person(firstname)
+			{
+				this.firstname=firstname;
+			}
+			person.prototype.drink = function(){
+  													console.log("vodka! rum ");
+												};
+			person.prototype.eat = function(){
+  													console.log("food,pizza");
+												};
+		function student(name,subject)
+		{
+			this.subject=subject;
+		}
+			student.prototype= Object.create(person.prototype);
+			student.prototype.constructor=student;
+			student.prototype.drink = function(){
+  										console.log("Vodka rum = Smirnoff and Vat69");
+												};
+			student.prototype.eat = function(){
+  										console.log("food pizza and drink");
+												};
+												//adding new goodbye and replacing previous
+			student.prototype.sayGoodBye = function(){
+  										console.log("Goodbye!");
+													};
+			var student1 = new student("Pritish", "Physics");
+							student1.drink();
+							student1.eat(); 
+							student1.sayGoodBye(); 
+
+
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>DETAILS OF CARS</title>
+	
+
+
+	
+</head>
+<body>
+	<form method="post"  onsubmit="lol()" >
+		Car Name: <input type="text" id="carname" name="carname" placeholder="carname">
+		Car Cost: <input type="text" id="carcost" name="carcost" placeholder="carcost">
+		Car brand:<input type="text" id="carbrand" name="carbrand" placeholder="carbrand">
+		<input type="submit" name="Submit">
+	</form>
+	<script type="text/javascript">
+	function car(make,model,year)
+			{
+				this.make=make;
+				this.model=model;
+				this.year=year;
+			}
+			function lol(){
+			var cars=new car(document.getElementById("carname").value,document.getElementById("carcost").value,document.getElementById('carbrand').value);
+					alert("NEW car added!!!    Car name:"+cars.make+"   Car Cost:"+cars.model+"  Car Brand"+cars.year); }
+</script>
+</body>
+</html>
